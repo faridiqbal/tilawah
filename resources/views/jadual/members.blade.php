@@ -51,8 +51,11 @@
 
 
 	<div class="card-body" id='listMember' style="display:">
-		<h5><b><u>Tilawah Sepanjang Hayat</u></b></h5>
-		<h6><b>Kumpulan {{ $group->nama }} (Minggu ke-{{ $group->minggu }})</b></h6>
+		<h5>@php for ($i=0; $i <= 5; $i++) echo $group->decoration; @endphp</h5>
+		<h5>{{ $dekoFirst }}<b><u>{{ $group->nama }} </u></b>{{ $dekoFirst }}</h5>
+		<h6>{{ $dekoLast }} {{ $group->description }} {{ $dekoLast }}</h6>
+		<h6>{{ $dekoFirst }}<b>Minggu ke-{{ $group->minggu }}</b>{{ $dekoFirst }}</h6>
+		<h6>{{ $dekoLast }}<b>Minggu ke-{{ $group->minggu }}</b>{{ $dekoLast }}</h6>
 
 		@forelse ($members as $member)
 		@php 

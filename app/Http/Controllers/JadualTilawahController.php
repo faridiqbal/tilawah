@@ -18,7 +18,12 @@ class JadualTilawahController extends Controller
         // dd($group);
         $group = Group::find($groupId);
         $members = Member::where('group_id',$groupId)->orderBy('juz')->get();
-        return view('jadual.members', compact('group','members'));
+        $deko = $group->decoration;
+        $dekoFirst = mb_substr($deko,0,1);
+        $dekoLast = mb_substr($deko,mb_strlen($deko)-1,1);
+
+        error_log('Len: ' . mb_strlen(trim($deko)));
+        return view('jadual.members', compact('group','members','dekoFirst','dekoLast'));
     }
 
     public function tambahJuzu(int $groupId)

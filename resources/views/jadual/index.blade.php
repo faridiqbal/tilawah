@@ -24,7 +24,7 @@
         
       @forelse ($groups as $group)
         <tr>
-          <td>
+          <td>{{ $group->decoration }} 
             <a href="{{ route('jadual.show',$group->id) }}">{{ $group->nama }}</a><br />
             <i>{{ $group->description }}</i>
           </td>
