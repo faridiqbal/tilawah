@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Group;
 use App\Member;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class JadualTilawahController extends Controller
 {
@@ -22,8 +23,13 @@ class JadualTilawahController extends Controller
         $dekoFirst = mb_substr($deko,0,1);
         $dekoLast = mb_substr($deko,mb_strlen($deko)-1,1);
 
+        $tarikhMula = Carbon::create($group->tarikhmula)->addWeeks($group->minggu-1)->locale('ms_MS');
+        $tarikhAkhir = Carbon::create($group->tarikhmula)->addWeeks($group->minggu)->addDays(-1)->locale('ms_MS');
+
+        $tarikhMingguMula = $tarikhMula->isoFormat('dddd') . ' ' . $tarikhMula->isoFormat('D/M');
+        $tarikhMingguAkhir = $tarikhAkhir->isoFormat('dddd') . ' ' . $tarikhAkhir->isoFormat('D/M');
         error_log('Len: ' . mb_strlen(trim($deko)));
-        return view('jadual.members', compact('group','members','dekoFirst','dekoLast'));
+        return view('jadual.members', compact('group','members','dekoFirst','dekoLast','tarikhMingguMula', 'tarikhMingguAkhir'));
     }
 
     public function tambahJuzu(int $groupId)

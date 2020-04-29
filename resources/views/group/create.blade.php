@@ -27,6 +27,10 @@
           <th>Dekorasi Emoticon (jika ada)</th><td><input type="text" name="decoration" class="form-control" value="{{ old('decoration') }}" /></td>
         </tr>
         <tr>
+          <th>Tarikh Mula Bacaan</th><td>
+            <input type="input" name="tarikhmula" class="form-control" value="{{ old('tarikhmula',date("Y-m-d")) }}" size='10' maxlength="10" /></td>
+        </tr>
+        <tr>
           <th>Minggu Bacaan</th><td><input type="number" name="minggu" class="form-control" value="{{ old('minggu','1') }}" size='2' maxlength="2" /></td>
         </tr>
         <tr>
