@@ -13,7 +13,7 @@
 @section('content')
 <div class="card mb-3">
 	<div class="card-header">
-		<h4><i class="fa fa-calendar"></i> Minggu ke-{{ $group->minggu }}
+		<h4><i class="fa fa-calendar"></i> Minggu ke-{{ $group->minggu }} ({{ $tarikhMingguMula }} - {{ $tarikhMingguAkhir }})
 		<div class='btn-group' style="float: right">
 			<button class='btn btn-default' onclick="copyText()" style="margin-right: 10px"><i class="fa fa-copy"></i> Copy Senarai</button>
 			<a href="{{ route('jadual.tambahJuzu', $group->id) }}"><button class='btn btn-info'><i class="fa fa-plus"></i> Tambahkan Juzu'</button></a>
