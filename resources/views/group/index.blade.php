@@ -21,6 +21,7 @@
           <tr>
             <th>Bil</th>
             <th>Nama Kumpulan</th>
+            <th>Dekorasi</th>
             <th>Jumlah Ahli</th>
             <th>&nbsp;</th>
           </tr>
@@ -34,6 +35,7 @@
               <a href="{{ route('group.edit',$group->id) }}">{{ $group->nama }}</a><br />
               <i>{{ $group->description }}</i>
             </td>
+            <td>{{ $group->decoration }}</td>
             <td>{{ $group->members->count() }}</td>
             <td>
               <a href="{{ route('group.edit',$group->id) }}"><button class='btn btn-primary'>Kemaskini</button></a>

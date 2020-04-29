@@ -45,6 +45,7 @@ class GroupController extends Controller
         $group = new Group;
         $group->nama = $request->nama;
         $group->description = $request->description;
+        $group->decoration = $request->decoration;
         $group->minggu = $request->minggu;
         $group->save();
 
@@ -93,6 +94,7 @@ class GroupController extends Controller
 
         $group->nama = $request->nama;
         $group->description = $request->description;
+        $group->decoration = $request->decoration;
         $group->minggu = $request->minggu;
         $group->update();
 

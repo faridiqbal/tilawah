@@ -25,6 +25,9 @@
           <th>Penerangan (jika ada)</th><td><input type="text" name="description" class="form-control" value="{{ old('description',$group->description) }}" /></td>
         </tr>
         <tr>
+          <th>Dekorasi Emoticon (jika ada)</th><td><input type="text" name="decoration" class="form-control" value="{{ old('decoration',$group->decoration) }}" /></td>
+        </tr>
+        <tr>
           <th>Minggu Bacaan</th><td><input type="number" name="minggu" class="form-control" value="{{ old('minggu',$group->minggu) }}" size='2' maxlength="2" /></td>
         </tr>
         <tr>
