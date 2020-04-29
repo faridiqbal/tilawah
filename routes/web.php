@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,8 +14,8 @@
 */
 
 Route::get('/', function () {
-    return view('home');
-})->name('home');
+    return redirect()->route('jadual.index');
+})->name('home');;
 
 // Route::resource('/jadual', 'JadualTilawahController');
 Route::get('/jadual', 'JadualTilawahController@index')->name('jadual.index');
