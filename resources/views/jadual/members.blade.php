@@ -53,10 +53,10 @@
 	<div class="card-body" id='listMember' style="display:">
 		<h5>@php for ($i=0; $i <= 5; $i++) echo $group->decoration; @endphp</h5>
 		<h5>{{ $group->decoration }}<b><u>{{ $group->nama }} </u></b>{{ $group->decoration }}</h5>
-		<h6>{{ $dekoLast }} {{ $group->description }} {{ $dekoLast }}</h6>
-		<h6>{{ $dekoFirst }} <b>Minggu ke-{{ $group->minggu }}</b> {{ $dekoFirst }}</h6>
-		<h6>{{ $dekoLast }} <b>{{ $tarikhMingguMula }} - {{ $tarikhMingguAkhir }}</b> {{ $dekoLast }}</h6>
-		<h5>@php for ($i=0; $i <= 5; $i++) echo $group->decoration; @endphp</h5>
+		<h5>{{ $dekoLast }} {{ $group->description }} {{ $dekoLast }}</h5>
+		<h5>{{ $dekoFirst }} <b>Minggu ke-{{ $group->minggu }}</b> {{ $dekoFirst }}</h5>
+		<h5>{{ $dekoLast }} <b>{{ $tarikhMingguMula }} - {{ $tarikhMingguAkhir }}</b> {{ $dekoLast }}</h5>
+		<h5>@php for ($i=0; $i <= 5; $i++) echo $group->decoration; @endphp</h5><br />
 		@forelse ($members as $member)
 		@php 
 		$jumlahSpace = 20 - (strlen($member->nama));
