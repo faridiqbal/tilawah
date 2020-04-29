@@ -7,6 +7,46 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+## Installation
+1. Clone the project.
+>  `git clone https://github.com/faridiqbal/tilawah.git`
+
+2. Get into project path and create environment file.
+>  `cd tilawah`<br />`cp .env.example .env`
+
+3. Update .env file using text editor, and configure using your environment settings.
+>  `APP_ENV=local`<br />
+>  `APP_DEBUG=true`<br />
+>  `APP_URL=http://myurl`<br />
+>  <br />
+>  `DB_CONNECTION=mysql`<br />
+>  `DB_HOST=127.0.0.1`<br />
+>  `DB_PORT=3306`<br />
+>  `DB_DATABASE=tilawah`<br />
+>  `DB_USERNAME=root`<br />
+>  `DB_PASSWORD=password`<br />
+
+4. Install Composer your system do no have one. ([How to install Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos))
+
+5. Install and configure libraries.
+>  `composer install`<br />
+>  `php artisan key:generate`<br />
+>  `php artisan jwt:secret`<br />
+
+6. Run migration and base data for new/clean installation (optional).
+>  **Warning: This will delete all tables and available data. Restore DB manually instead if you already have data.**<br />
+>  `composer dump-autoload`<br />
+>  `php artisan migrate:fresh --seed`
+
+7. Application can now be run either by using normal webserver (Apache/NGINX) or using php artisan as command below:
+>  `php artisan serve`
+
+
+## Run Unit Test
+1. Run this command on project folder.
+>  `./vendor/bin/phpunit`
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
@@ -26,41 +66,6 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
 If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
-- [云软科技](http://www.yunruan.ltd/)
 
 ## Contributing
 
