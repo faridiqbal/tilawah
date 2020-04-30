@@ -52,17 +52,17 @@
 
 	<div class="card-body" id='listMember' style="display:">
 		<h5>@php for ($i=0; $i <= 5; $i++) echo $group->decoration; @endphp</h5>
-		<h5>{{ $group->decoration }}<b><u>{{ $group->nama }} </u></b>{{ $group->decoration }}</h5>
-		<h5>{{ $dekoLast }} {{ $group->description }} {{ $dekoLast }}</h5>
-		<h5>{{ $dekoFirst }} <b>Minggu ke-{{ $group->minggu }}</b> {{ $dekoFirst }}</h5>
-		<h5>{{ $dekoLast }} <b>{{ $tarikhMingguMula }} - {{ $tarikhMingguAkhir }}</b> {{ $dekoLast }}</h5>
+		<h5>{{ $dekoFirst }}<b>*{{ $group->nama }}*</b>{{ $dekoFirst }}</h5>
+		<h5>{{ $dekoLast }} _{{ $group->description }}_ {{ $dekoLast }}</h5><br />
+		<h5>{{ $dekoFirst }} Minggu {{ $group->minggu }} {{ $dekoFirst }}</h5>
+		<h5>{{ $dekoLast }} {{ $tarikhMingguMula }} - {{ $tarikhMingguAkhir }} {{ $dekoLast }}</h5>
 		<h5>@php for ($i=0; $i <= 5; $i++) echo $group->decoration; @endphp</h5><br />
 		@forelse ($members as $member)
 		@php 
 		$jumlahSpace = 20 - (strlen($member->nama));
 		@endphp
 		{{ $loop->iteration }}. {{ $member->nama }} 
-		@php for ($i=0; $i <= $jumlahSpace; $i++) echo '&nbsp;'; @endphp
+		{{-- @php for ($i=0; $i <= $jumlahSpace; $i++) echo '&nbsp;'; @endphp --}}
 		- Juz {{ $member->juz }}<br />
 		@empty
 		[ Tiada ahli ]
