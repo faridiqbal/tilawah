@@ -54,7 +54,7 @@
 		<h5>@php for ($i=0; $i <= 5; $i++) echo $group->decoration; @endphp</h5>
 		<h5>{{ $dekoFirst }}<b>*{{ $group->nama }}*</b>{{ $dekoFirst }}</h5>
 		<h5>{{ $dekoLast }} _{{ $group->description }}_ {{ $dekoLast }}</h5><br />
-		<h5>{{ $dekoFirst }} Minggu {{ $group->minggu }} {{ $dekoFirst }}</h5>
+		<h5>{{ $dekoFirst }} <b>*Minggu {{ $group->minggu }}*</b> {{ $dekoFirst }}</h5>
 		<h5>{{ $dekoLast }} {{ $tarikhMingguMula }} - {{ $tarikhMingguAkhir }} {{ $dekoLast }}</h5>
 		<h5>@php for ($i=0; $i <= 5; $i++) echo $group->decoration; @endphp</h5><br />
 		@forelse ($members as $member)
@@ -63,7 +63,7 @@
 		@endphp
 		{{ $loop->iteration }}. {{ $member->nama }} 
 		{{-- @php for ($i=0; $i <= $jumlahSpace; $i++) echo '&nbsp;'; @endphp --}}
-		- Juz {{ $member->juz }}<br />
+		-Juz {{ $member->juz }}<br />
 		@empty
 		[ Tiada ahli ]
 		@endforelse
